@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trilha de Estudos</title>
+  <meta name="description" content="Quiz de estudo no estilo trilha: lições curtas, guias, consulta rápida e revisão de erros para várias matérias.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cpath d='M40 6 L74 40 L40 74 L6 40Z' fill='%2358cc02'/%3E%3C/svg%3E">
+</head>
+<body>
+  <div id="shell">
+    <nav class="sidenav">
+      <div class="logo"><svg viewBox="0 0 80 80" width="30" height="30"><path d="M40 6 L74 40 L40 74 L6 40Z" fill="#58cc02" stroke="#46a302" stroke-width="5" stroke-linejoin="round"/></svg><span>trilha</span></div>
+      <div id="courseChip"></div>
+      <div id="navItems"></div>
+    </nav>
+    <div class="mtop" id="mstats"></div>
+    <main id="view"></main>
+    <aside id="stats"></aside>
+  </div>
+  <div id="lessonView" class="lesson" hidden></div>
+  <div id="editorView" hidden></div>
+  <div id="modal" hidden></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- motor (não precisa mexer) -->
+  <script src="js/quiz.js"></script>
+  <script src="js/er-render.js"></script>
+  <script src="js/prompt-ia.js"></script>
+
+  <!-- ===== CONTEÚDOS: uma linha por matéria (veja COMO-ADICIONAR-CONTEUDO.md) ===== -->
+  <script src="conteudos/banco-de-dados.js"></script>
+  <script src="conteudos/sistemas-operacionais.js"></script>
+  <!-- ===== fim dos conteúdos ===== -->
+
+  <!-- oficina de diagramas ER (usada pela matéria Banco de Dados) e app -->
+  <script src="js/tasks.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
